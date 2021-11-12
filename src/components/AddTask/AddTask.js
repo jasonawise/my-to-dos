@@ -1,5 +1,14 @@
+import React from 'react'
+import { addTask } from '../../fetch'
+
 function AddTask() {
-	return <h1>Hello World</h1>;
+	React.useEffect(() => {
+		const payload = {
+			name: 'Jason'
+		}
+		addTask(payload)
+	}, [])
+	return <h1>Hello World</h1>
 }
 
-export default AddTask;
+export default AddTask
